@@ -6,7 +6,7 @@ import { ParallaxEffect } from '@/components/ParallaxEffect';
 import { RocketIcon, FolderIcon, UsersIcon, BrainCircuitIcon, BarChart3Icon, ShieldCheckIcon, PuzzleIcon, SparklesIcon } from 'lucide-react';
 ---
 
-<Layout title='FileFlow AI - Next Generation File Management'>
+<Layout title='1Keeping - Next Generation File Management'>
 	<GlowEffect client:load />
 
 	<main class='relative overflow-hidden min-h-screen'>
@@ -31,17 +31,23 @@ import { RocketIcon, FolderIcon, UsersIcon, BrainCircuitIcon, BarChart3Icon, Shi
 					</div>
 
 					<div class='parallax-layer flex flex-col sm:flex-row gap-4 items-center justify-center mt-8'>
-						<Button
-							size='lg'
-							className='group'>
-							<RocketIcon className='mr-2 h-4 w-4 transition-transform group-hover:-translate-y-1' />
-							Join Early Access
-						</Button>
-						<Button
-							variant='secondary'
-							size='lg'>
-							<a href='#feature-list'>View Features</a>
-						</Button>
+						<a
+							href='https://76aoh72kjo8.typeform.com/to/ZoydCZOt'
+							target='_blank'>
+							<Button
+								size='lg'
+								className='group'>
+								<RocketIcon className='mr-2 h-4 w-4 transition-transform group-hover:-translate-y-1' />
+								Join Early Access
+							</Button>
+						</a>
+						<a href='#feature-list'>
+							<Button
+								variant='secondary'
+								size='lg'>
+								View Features
+							</Button>
+						</a>
 					</div>
 
 					<div class='parallax-layer mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
@@ -64,7 +70,7 @@ import { RocketIcon, FolderIcon, UsersIcon, BrainCircuitIcon, BarChart3Icon, Shi
 								},
 							].map(feature => (
 								<div class='p-6 rounded-xl bg-secondary/50 backdrop-blur-sm border border-primary/20 hover:bg-secondary/70 transition-all hover:scale-105'>
-									<feature.icon className='w-10 h-10 text-primary mb-4' />
+									<feature.icon className='w-10 h-10 text-primary mb-4 mx-auto' />
 									<h3 class='text-xl font-semibold mb-2'>{feature.title}</h3>
 									<p class='text-muted-foreground'>{feature.description}</p>
 								</div>
@@ -135,17 +141,23 @@ import { RocketIcon, FolderIcon, UsersIcon, BrainCircuitIcon, BarChart3Icon, Shi
 				<div class='mt-32 text-center'>
 					<h2 class='text-3xl md:text-4xl font-bold mb-8'>Ready to Transform Your File Management?</h2>
 					<div class='flex flex-col sm:flex-row gap-4 items-center justify-center'>
-						<Button
-							size='lg'
-							className='group'>
-							<RocketIcon className='mr-2 h-4 w-4 transition-transform group-hover:-translate-y-1' />
-							Get Early Access
-						</Button>
-						<Button
-							variant='secondary'
-							size='lg'>
-							Contact Sales
-						</Button>
+						<a
+							href='https://76aoh72kjo8.typeform.com/to/ZoydCZOt'
+							target='_blank'>
+							<Button
+								size='lg'
+								className='group'>
+								<RocketIcon className='mr-2 h-4 w-4 transition-transform group-hover:-translate-y-1' />
+								Get Early Access
+							</Button>
+						</a>
+						<a href='mailto:contact@1keeping.com'>
+							<Button
+								variant='secondary'
+								size='lg'>
+								Contact Sales
+							</Button>
+						</a>
 					</div>
 				</div>
 			</ParallaxEffect>
