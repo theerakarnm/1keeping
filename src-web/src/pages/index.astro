@@ -1,0 +1,154 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Button } from '@/components/ui/button';
+import { GlowEffect } from '@/components/GlowEffect';
+import { ParallaxEffect } from '@/components/ParallaxEffect';
+import { RocketIcon, FolderIcon, UsersIcon, BrainCircuitIcon, BarChart3Icon, ShieldCheckIcon, PuzzleIcon, SparklesIcon } from 'lucide-react';
+---
+
+<Layout title='FileFlow AI - Next Generation File Management'>
+	<GlowEffect client:load />
+
+	<main class='relative overflow-hidden min-h-screen'>
+		<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?q=80&w=2072')] bg-cover bg-center opacity-[0.15]"></div>
+
+		<div class='container mx-auto px-4 py-20 relative z-10'>
+			<ParallaxEffect client:load>
+				<div class='flex flex-col items-center justify-center min-h-[80vh] gap-8 text-center'>
+					<div class='parallax-layer space-y-6'>
+						<div class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 backdrop-blur-sm border border-primary/20'>
+							<SparklesIcon className='w-4 h-4 text-primary' />
+							<span class='text-sm'>Coming March 3rd, 2025</span>
+						</div>
+
+						<h1 class='text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary/90 to-purple-300 bg-clip-text text-transparent'>
+							1Keeping
+							<br /> Intelligent File Management
+							<br /> Powered by AI
+						</h1>
+
+						<p class='text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto'>Intelligent File Management Experience the future of file management with AI-powered organization, advanced collaboration tools, and enterprise-grade security.</p>
+					</div>
+
+					<div class='parallax-layer flex flex-col sm:flex-row gap-4 items-center justify-center mt-8'>
+						<Button
+							size='lg'
+							className='group'>
+							<RocketIcon className='mr-2 h-4 w-4 transition-transform group-hover:-translate-y-1' />
+							Join Early Access
+						</Button>
+						<Button
+							variant='secondary'
+							size='lg'>
+							<a href='#feature-list'>View Features</a>
+						</Button>
+					</div>
+
+					<div class='parallax-layer mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
+						{
+							[
+								{
+									icon: FolderIcon,
+									title: 'Smart Organization',
+									description: 'AI-powered file categorization and tagging system',
+								},
+								{
+									icon: BrainCircuitIcon,
+									title: 'AI Features',
+									description: 'Content recognition, sentiment analysis, and smart recommendations',
+								},
+								{
+									icon: ShieldCheckIcon,
+									title: 'Enterprise Security',
+									description: 'End-to-end encryption with granular access controls',
+								},
+							].map(feature => (
+								<div class='p-6 rounded-xl bg-secondary/50 backdrop-blur-sm border border-primary/20 hover:bg-secondary/70 transition-all hover:scale-105'>
+									<feature.icon className='w-10 h-10 text-primary mb-4' />
+									<h3 class='text-xl font-semibold mb-2'>{feature.title}</h3>
+									<p class='text-muted-foreground'>{feature.description}</p>
+								</div>
+							))
+						}
+					</div>
+				</div>
+
+				<div
+					id='feature-list'
+					class='mt-32 max-w-7xl mx-auto'>
+					<div class='text-center mb-16'>
+						<h2 class='text-3xl md:text-4xl font-bold mb-4'>Powerful Features for Modern Teams</h2>
+						<p class='text-muted-foreground max-w-2xl mx-auto'>Discover how our AI-powered platform revolutionizes file management</p>
+					</div>
+
+					<div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+						{
+							[
+								{
+									icon: UsersIcon,
+									title: 'Collaboration Tools',
+									features: ['Smart file sharing with custom permissions', 'Version control and file history', 'Team spaces and comments'],
+								},
+								{
+									icon: BrainCircuitIcon,
+									title: 'AI Capabilities',
+									features: ['Content recognition and analysis', 'Duplicate detection', 'Smart file recommendations'],
+								},
+								{
+									icon: BarChart3Icon,
+									title: 'Analytics & Insights',
+									features: ['Usage analytics and trends', 'Storage optimization', 'Activity monitoring'],
+								},
+								{
+									icon: ShieldCheckIcon,
+									title: 'Security & Control',
+									features: ['Two-factor authentication', 'End-to-end encryption', 'Granular access controls'],
+								},
+								{
+									icon: PuzzleIcon,
+									title: 'Integrations',
+									features: ['Third-party app connections', 'API access', 'Mobile & browser extensions'],
+								},
+								{
+									icon: RocketIcon,
+									title: 'Enterprise Ready',
+									features: ['Custom retention policies', 'White-label solutions', 'Priority support'],
+								},
+							].map(section => (
+								<div class='p-6 rounded-xl bg-secondary/50 backdrop-blur-sm border border-primary/20 hover:bg-secondary/70 transition-all group'>
+									<section.icon className='w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-transform' />
+									<h3 class='text-xl font-semibold mb-4'>{section.title}</h3>
+									<ul class='space-y-2'>
+										{section.features.map(feature => (
+											<li class='flex items-center gap-2'>
+												<SparklesIcon className='w-4 h-4 text-primary/70' />
+												<span class='text-muted-foreground'>{feature}</span>
+											</li>
+										))}
+									</ul>
+								</div>
+							))
+						}
+					</div>
+				</div>
+
+				<div class='mt-32 text-center'>
+					<h2 class='text-3xl md:text-4xl font-bold mb-8'>Ready to Transform Your File Management?</h2>
+					<div class='flex flex-col sm:flex-row gap-4 items-center justify-center'>
+						<Button
+							size='lg'
+							className='group'>
+							<RocketIcon className='mr-2 h-4 w-4 transition-transform group-hover:-translate-y-1' />
+							Get Early Access
+						</Button>
+						<Button
+							variant='secondary'
+							size='lg'>
+							Contact Sales
+						</Button>
+					</div>
+				</div>
+			</ParallaxEffect>
+		</div>
+	</main>
+</Layout>
